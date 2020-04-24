@@ -7,7 +7,7 @@ scripts:
   - docker images rajkotti/node
 
 before_deploy:
-  - docker login rajkotti -p Life@docker175
+  - docker login rajkotti --password-stdin
 
 deploy:
   provider: script 
