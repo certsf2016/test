@@ -4,10 +4,10 @@ services:
 
 scripts:
   - docker build -t rajkotti/node .
-  - docker image rajkotti/node
+  - docker images rajkotti/node
 
 before_deploy:
-  - docker login rajkotti@gmail.com -p Life@docker175
+  - docker login rajkotti -p Life@docker175
 
 deploy:
   provider: script 
