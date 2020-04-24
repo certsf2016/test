@@ -1,7 +1,16 @@
 sudo: required
 services:
  - docker
- 
+
 scripts:
   - docker build -t rajkotti/node .
   - docker image rajkotti/node
+
+before_deploy:
+  - docker login rajkotti -p Life@docker175
+
+deploy:
+  provider: script 
+  script: docker push rajkotti/node
+  on:
+    branch: master 
