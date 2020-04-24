@@ -1,6 +1,6 @@
 {
   "presets": [
-      "env",s
+      "env",
       "stage-0"
   ]
 }
